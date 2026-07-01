@@ -12,11 +12,10 @@ const Main = () => {
         imageUrl: "https://images.wondershare.com/filmora/article-images/best-meme-templates-07.jpg"
     })
 
-    const [allMemes, setAllMemes] = React.useState(memes)
 
     function getMemeImage() {
-        const randomNumber = Math.floor(Math.random() * allMemes.length)
-        const url = allMemes[randomNumber].url
+        const randomNumber = Math.floor(Math.random() * memes.length)
+        const url = memes[randomNumber].url
 
         setMeme(prevMeme => ({
             ...prevMeme,
